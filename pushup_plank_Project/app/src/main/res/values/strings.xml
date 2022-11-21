@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">pushup_plank_Project</string>
+    <string name="SettingMessage">자세는 좌측의 이미지를 보고 따라해주세요 \n 기본 데이터 생성 및 정상적인 동작 확인을 위해 팔을 편 자세 5초, 팔을 굽힌 자세 5초를 3번 유지해주세요. \n 머리로 횟수를 인식하며 가슴과 배의 편차가 일정하면 초기 설정이 완료됩니다</string>
+    <string name="plankSetting">자세는 좌측의 이미지를 보고 따라해주세요 \n 기본 데이터 생성 및 정상적인 동작 확인을 위해 플랭크 자세를 3번 5초동안 유지해주세요. \n 5초동안 가슴과 배의 편차가 일정하면 초기 설정이 완료됩니다</string>
+</resources>
