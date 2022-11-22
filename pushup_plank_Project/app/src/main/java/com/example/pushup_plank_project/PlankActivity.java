@@ -35,16 +35,16 @@ public class PlankActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
 //        if(view.getId()==R.id.settingBtnPlank){
-//            Intent Intent01 = new Intent(PlankActivity.this, settingsPopup.class);
+//            Intent Intent01 = new Intent(PlankActivity.this, Configuration.class);
 //            startActivity(Intent01); //인텐트 실행
 //        }
 //        if(view.getId()==R.id.goalBtnPlank){
-//            Intent Intent01 = new Intent(PlankActivity.this, goalSettingPopup.class);
-//            startActivity(Intent01); //인텐트 실행
+//            Intent Intent02 = new Intent(PlankActivity.this, SettingsGoal.class);
+//            startActivity(Intent02); //인텐트 실행
 //        }
         if(view.getId()==R.id.changeBtnPlank){
-            Intent Intent01 = new Intent(PlankActivity.this, MainActivity.class);
-            startActivity(Intent01); //인텐트 실행
+            Intent Intent03 = new Intent(PlankActivity.this, MainActivity.class);
+            startActivity(Intent03); //인텐트 실행
         }
     }
 

@@ -9,9 +9,10 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    //    TextView textSuccess1st, textSuccess2st, textSuccess3st;
+    TextView textSuccess1st, textSuccess2st, textSuccess3st;
     ImageButton settingBtn01, goalBtn01, changeBtn01;
 
     @Override
@@ -35,18 +36,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 //        if(view.getId()==R.id.settingBtnPlank){
-//            Intent Intent01 = new Intent(MainActivity.this, PopupSettings.class);
+//            Intent Intent01 = new Intent(MainActivity.this, Configuration.class);
 //            startActivity(Intent01); //인텐트 실행
+//                startActivity(new Intent(MainActivity.this, Configuration.class));
 //        }
 //        if(view.getId()==R.id.goalBtnPlank){
-//            Intent Intent01 = new Intent(MainActivity.this, PopupGoal.class);
-//            startActivity(Intent01); //인텐트 실행
+//            Intent Intent02 = new Intent(MainActivity.this, SettingsGoal.class);
+//            startActivity(Intent02); //인텐트 실행
 //        }
         if(view.getId()==R.id.changeBtnPushup){
-            Intent Intent01 = new Intent(MainActivity.this, PlankActivity.class);
-            startActivity(Intent01); //인텐트 실행
+            Intent Intent03 = new Intent(MainActivity.this, PlankActivity.class);
+            startActivity(Intent03); //인텐트 실행
         }
     }
+
+    //만약 다른 액티비티에서 데이터를 주고 받는다면 사용
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (requestCode == 1) {
+//            if (resultCode == RESULT_OK) {
+//                String result = data.getStringExtra("result");
+//                textSuccess1st.setText(result);    //받아온 데이터를 입력받을 텍스트뷰
+//                textSuccess2st.setText(result);    //받아온 데이터를 입력받을 텍스트뷰
+//                textSuccess3st.setText(result);    //받아온 데이터를 입력받을 텍스트뷰
+//            }
+//        }
+//    }
+
     @Override
     public void onBackPressed() {
         AlertDialog.Builder alert_ex = new AlertDialog.Builder(this);

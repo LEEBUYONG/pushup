@@ -45,12 +45,9 @@ public class PlankSettings extends AppCompatActivity implements View.OnClickList
         plankNextBtn = (Button) findViewById(R.id.plankNextBtn);
         plankNextBtn.setOnClickListener(this);
 
-
-        //타이머 3번 끝나고 text(Text6st != null)이고 if(편차 < 5) 해당 페이지 재실행, (편차 > 5)라면 서버에 데이터 전달 후 MainActivity로 넘어감
-
         //타이머- 1초씩 증가할때마다 좌측 상단 텍스트뷰에 숫자가 늘어나고, 5초 되면 초기화
         //총 9번 타이머 진행(굽힌거(3회) 안굽힌거(3회)로 5초씩 총 9번 반복)-반복할때마다 배,가슴 편차 하나씩 데이터 받아 출력
-        new CountDownTimer(5000, 1000) {
+        CountDownTimer countDownTimer = new CountDownTimer(5000, 1000) {
             public void onTick(long millisUntilFinished) {
                 // 두 자리 숫자로만 형식을 지정하는 데 사용
                 NumberFormat f = new DecimalFormat("00");
@@ -60,10 +57,14 @@ public class PlankSettings extends AppCompatActivity implements View.OnClickList
             // 작업이 끝나면 00초 인쇄
             public void onFinish() {
                 timerText.setText("00초");
-                plankBellyTest1.setText("5");    //편차 넣기
             }
-        }.start();
+        };
 
+        //고개를 숙여서 카운트 인식이 되면 countDownTimer.start(); <이걸로 타이머 실행
+        //5초가 끝나고 고개를 들고 카운트 인식이 되면 countDownTimer.cancel(); <이걸로 타이머 종료
+        // 굽힌거 5초, 안 굽힌거 5초를 한세트 기준으로 가슴과 배 편차 값 정수로 출력
+
+        //타이머 3번 끝나고  (편차텍스트6개 != null && 6개의 편차값 > 5) 해당 페이지 재실행, if (6개의 편차값 < 5)라면 서버에 데이터 전달 후 MainActivity로 넘어감
 
     }
 

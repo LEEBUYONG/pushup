@@ -14,14 +14,16 @@
         tools:targetApi="32">
         <activity
             android:name=".Configuration"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".SettingsGoal"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
