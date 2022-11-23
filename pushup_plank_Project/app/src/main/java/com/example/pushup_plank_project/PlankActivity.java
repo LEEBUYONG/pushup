@@ -3,6 +3,7 @@ package com.example.pushup_plank_project;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -10,7 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class PlankActivity extends AppCompatActivity implements View.OnClickListener {
+public class PlankActivity extends Activity implements View.OnClickListener {
 //    TextView textSuccess1stPlank, textSuccess2stPlank, textSuccess3stPlank;
     ImageButton settingBtnPlank, goalBtnPlank, changeBtnPlank;
 

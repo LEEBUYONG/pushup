@@ -2,8 +2,10 @@ package com.example.pushup_plank_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -15,7 +17,7 @@ import java.text.NumberFormat;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class PushupSettings extends AppCompatActivity implements View.OnClickListener {
+public class PushupSettings extends Activity implements View.OnClickListener {
 
     TextView pushupChestTest1, pushupChestTest2, pushupChestTest3;
     TextView pushupBellyTest1, pushupBellyTest2, pushupBellyTest3;
@@ -45,6 +47,9 @@ public class PushupSettings extends AppCompatActivity implements View.OnClickLis
         pushupnextBtn = (Button) findViewById(R.id.pushupNextBtn);
         pushupnextBtn.setOnClickListener(this);
 
+        //카운트다운 효과음
+        MediaPlayer player = MediaPlayer.create(this, R.raw.countdown);
+
         //타이머- 1초씩 증가할때마다 좌측 상단 텍스트뷰에 숫자가 늘어나고, 5초 되면 초기화
         //총 9번 타이머 진행(굽힌거(3회) 안굽힌거(3회)로 5초씩 총 9번 반복)-반복할때마다 배,가슴 편차 하나씩 데이터 받아 출력
         CountDownTimer countDownTimer = new CountDownTimer(5000, 1000) {
@@ -53,11 +58,17 @@ public class PushupSettings extends AppCompatActivity implements View.OnClickLis
                 NumberFormat f = new DecimalFormat("00");
                 long sec = (millisUntilFinished / 1000) % 60;
                 timerText.setText(f.format(sec)+"초");
+//                player.start();
+//                if(player.isPlaying()){
+//                    player.stop();
+//                    player.reset();
+//                }
             }
             // 작업이 끝나면 00초 인쇄
             public void onFinish() {
                 timerText.setText("00초");
             }
+//            player.stop();
         };
 
         //고개를 숙여서 카운트 인식이 되면 countDownTimer.start(); <이걸로 타이머 실행
@@ -76,4 +87,15 @@ public class PushupSettings extends AppCompatActivity implements View.OnClickLis
             startActivity(Intent01); //인텐트 실행
         }
     }
+
+    //음악파일이 리소스 잡아먹는걸 방지
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        // MediaPlayer 해지
+//        if(player != null) {
+//            player.release();
+//            player = null;
+//        }
+//    }
 }

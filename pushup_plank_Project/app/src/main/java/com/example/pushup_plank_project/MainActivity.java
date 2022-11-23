@@ -3,6 +3,7 @@ package com.example.pushup_plank_project;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -11,7 +12,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
     TextView textSuccess1st, textSuccess2st, textSuccess3st;
     ImageButton settingBtn01, goalBtn01, changeBtn01;
 
@@ -35,15 +36,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-//        if(view.getId()==R.id.settingBtnPlank){
-//            Intent Intent01 = new Intent(MainActivity.this, Configuration.class);
-//            startActivity(Intent01); //인텐트 실행
-//                startActivity(new Intent(MainActivity.this, Configuration.class));
-//        }
-//        if(view.getId()==R.id.goalBtnPlank){
-//            Intent Intent02 = new Intent(MainActivity.this, SettingsGoal.class);
-//            startActivity(Intent02); //인텐트 실행
-//        }
+        if(view.getId()==R.id.settingBtnPlank){
+            Intent Intent01 = new Intent(MainActivity.this, Configuration.class);
+            startActivity(Intent01); //인텐트 실행
+        }
+        if(view.getId()==R.id.goalBtnPlank){
+            Intent Intent02 = new Intent(MainActivity.this, SettingsGoal.class);
+            startActivity(Intent02); //인텐트 실행
+        }
         if(view.getId()==R.id.changeBtnPushup){
             Intent Intent03 = new Intent(MainActivity.this, PlankActivity.class);
             startActivity(Intent03); //인텐트 실행

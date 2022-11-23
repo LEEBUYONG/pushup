@@ -2,6 +2,7 @@ package com.example.pushup_plank_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-public class FirstLogin extends AppCompatActivity implements View.OnClickListener {
+public class FirstLogin extends Activity implements View.OnClickListener {
 
     Button loginBtn;
     EditText id01, name01;
