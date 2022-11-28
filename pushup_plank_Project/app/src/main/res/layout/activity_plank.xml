@@ -145,13 +145,15 @@
         android:layout_height="0dp"
         android:background="@drawable/button_round"
         android:gravity="center"
-        android:text="1024"
+        android:text="1309"
         android:textAlignment="center"
         android:textSize="21dp"
         app:layout_constraintBottom_toTopOf="@+id/top2"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/textCumulativePlank" />
+        app:layout_constraintTop_toBottomOf="@+id/textCumulativePlank"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/dataDailyAveragePlank"
@@ -159,7 +161,7 @@
         android:layout_height="0dp"
         android:background="@drawable/button_round"
         android:gravity="center"
-        android:text="00초"
+        android:text="75/60"
         android:textAlignment="center"
         android:textSize="21dp"
         app:layout_constraintBottom_toTopOf="@+id/top2"
@@ -167,7 +169,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline13"
         app:layout_constraintTop_toBottomOf="@+id/textDailyAveragePlank"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textCumulativePlank"
@@ -254,7 +256,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="0"
+        android:text="60"
         android:textSize="28dp"
         app:layout_constraintBottom_toTopOf="@+id/top2"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
@@ -278,7 +280,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.54" />
+        app:layout_constraintGuide_begin="395dp" />
 
     <TextView
         android:id="@+id/textView10"
@@ -309,7 +311,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="00"
+        android:text="20"
         android:textAlignment="center"
         android:textSize="28dp"
         app:layout_constraintBottom_toTopOf="@+id/top"
@@ -322,7 +324,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="00"
+        android:text="20"
         android:textAlignment="center"
         android:textSize="28dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -335,7 +337,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="00"
+        android:text="20"
         android:textAlignment="center"
         android:textSize="28dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom"
@@ -348,7 +350,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="00"
+        android:text="06"
         android:textAlignment="center"
         android:textColor="#FF0000"
         android:textSize="21dp"
@@ -362,7 +364,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="00"
+        android:text="03"
         android:textAlignment="center"
         android:textColor="#FF0000"
         android:textSize="21dp"
@@ -376,7 +378,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="00"
+        android:text="05"
         android:textAlignment="center"
         android:textColor="#FF0000"
         android:textSize="21dp"

@@ -66,7 +66,7 @@ public class PlankSettings extends Activity implements View.OnClickListener {
             }
             // 작업이 끝나면 00초 인쇄
             public void onFinish() {
-                timerText.setText("00초");
+                timerText.setText("05초");
 //                player.stop();
             }
         };countDownTimer.start();
